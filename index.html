@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Cờ Vua Báo Thiếu Niên Tiền Phong 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D9232D',
+                            darkRed: '#991B1B',
+                            gold: '#F59E0B',
+                            goldHover: '#D97706',
+                            navy: '#0F172A',
+                            blue: '#1E3A8A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #0f172a;
+            background-image: radial-gradient(#1e3a8a 1px, transparent 1px), radial-gradient(#d9232d 1px, #0f172a 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        .chess-tile {
+            background-image: linear-gradient(45deg, rgba(217, 35, 45, 0.05) 25%, transparent 25%), 
+                              linear-gradient(-45deg, rgba(217, 35, 45, 0.05) 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, rgba(217, 35, 45, 0.05) 75%), 
+                              linear-gradient(-45deg, transparent 75%, rgba(217, 35, 45, 0.05) 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand Title -->
+                <div class="flex items-center space-x-3 cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                    <div class="w-12 h-12 bg-brand-red rounded-xl flex items-center justify-center text-white shadow-lg shadow-red-500/30 transform hover:scale-105 transition-transform">
+                        <i class="fa-solid font-bold text-2xl fa-chess-knight"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block">Báo Thiếu Niên Tiền Phong & Nhi Đồng</span>
+                        <h1 class="text-lg font-extrabold text-brand-navy leading-tight">GIẢI CỜ VUA TOÀN QUỐC 2026</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                    <a href="#about" class="hover:text-brand-red transition-colors py-2">Giới Thiệu</a>
+                    <a href="#rules" class="hover:text-brand-red transition-colors py-2">Điều Lệ Giải</a>
+                    <a href="#prizes" class="hover:text-brand-red transition-colors py-2">Giải Thưởng</a>
+                    <a href="#registered" class="hover:text-brand-red transition-colors py-2">Danh Sách</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#register" class="bg-gradient-to-r from-brand-red to-red-700 hover:from-red-600 hover:to-brand-darkRed text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        Đăng Ký Ngay
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-slate-600 hover:text-brand-red p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#about" class="mobile-link block text-slate-700 hover:text-brand-red font-medium py-1">Giới Thiệu</a>
+            <a href="#rules" class="mobile-link block text-slate-700 hover:text-brand-red font-medium py-1">Điều Lệ Giải</a>
+            <a href="#prizes" class="mobile-link block text-slate-700 hover:text-brand-red font-medium py-1">Giải Thưởng</a>
+            <a href="#registered" class="mobile-link block text-slate-700 hover:text-brand-red font-medium py-1">Danh Sách Thi Đấu</a>
+            <a href="#register" class="mobile-link block bg-brand-red text-white text-center py-2.5 rounded-lg font-bold">Đăng Ký Ngay</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative hero-pattern text-white py-16 lg:py-24 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40 z-0"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center space-x-2 bg-red-500/20 border border-red-500/30 text-red-300 px-4 py-1.5 rounded-full text-sm font-semibold">
+                            <span class="w-2 h-2 rounded-full bg-red-400 animate-ping"></span>
+                            <span>Mở Đăng Ký Chính Thức 2026</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight font-serif text-white leading-tight">
+                            GIẢI CỜ VUA TOÀN QUỐC <br/>
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-300 to-amber-500">
+                                BÁO THIẾU NIÊN TIỀN PHONG
+                            </span>
+                        </h1>
+                        <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0">
+                            Sân chơi trí tuệ đỉnh cao dành cho các tài năng cờ vua trẻ trên toàn quốc. Khai phá tiềm năng, chinh phục đỉnh cao trí tuệ và cơ hội nhận Huy chương cùng Bằng khen cấp Quốc gia!
+                        </p>
+
+                        <!-- Quick Info Badges -->
+                        <div class="pt-2 grid grid-cols-2 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
+                            <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                                <p class="text-xs text-slate-400">Địa điểm</p>
+                                <p class="font-bold text-white text-sm sm:text-base">Quy mô toàn quốc</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10">
+                                <p class="text-xs text-slate-400">Độ tuổi</p>
+                                <p class="font-bold text-white text-sm sm:text-base">Từ U6 đến U15</p>
+                            </div>
+                        </div>
+
+                        <!-- CTA Buttons -->
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
+                            <a href="#register" class="w-full sm:w-auto bg-brand-gold hover:bg-brand-goldHover text-slate-900 font-extrabold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 text-center flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <span>ĐĂNG KÝ KỲ THỦ</span>
+                            </a>
+                            <a href="#rules" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-6 py-4 rounded-xl transition-all text-center">
+                                Xem Điều Lệ Giải
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Live Stat Card -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-slate-800/80 backdrop-blur-xl border border-slate-700/60 p-6 sm:p-8 rounded-2xl shadow-2xl">
+                            <h3 class="text-xl font-bold text-center text-white mb-2">Cổng Đăng Ký Đang Mở</h3>
+                            <p class="text-xs text-slate-400 text-center mb-6">Hệ thống sẽ tự động đóng khi đủ số lượng kỳ thủ</p>
+
+                            <!-- Live Stat Badge -->
+                            <div class="space-y-4">
+                                <div class="flex justify-between text-xs text-slate-300 font-semibold">
+                                    <span>Đã đăng ký: <strong id="reg-count-text" class="text-emerald-400 text-sm">785/2000</strong> Kỳ thủ</span>
+                                    <span id="reg-percent-text">39.25% Chỉ tiêu</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                                    <div id="reg-progress-bar" class="bg-gradient-to-r from-emerald-500 to-green-300 h-3 rounded-full transition-all duration-500" style="width: 39.25%"></div>
+                                </div>
+                                <p class="text-xs text-slate-400 text-center italic pt-2">
+                                    * Ban tổ chức ưu tiên các kỳ thủ nộp hồ sơ hoàn chỉnh sớm.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlights / Overview -->
+        <section id="about" class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">Về Giải Đấu</h2>
+                    <p class="text-3xl font-extrabold text-brand-navy font-serif">Giải Cờ Vua Uy Tín Bậc Nhất Cho Giới Trẻ</p>
+                    <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 bg-red-100 text-brand-red rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Quy Mô Quốc Gia</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Quy tụ hơn 800 kỳ thủ xuất sắc từ các câu lạc bộ, trường học trên khắp 63 tỉnh thành Việt Nam tranh tài.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 bg-blue-100 text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Chứng Nhận Chuẩn Quốc Gia</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Kết quả thi đấu được công nhận tính điểm Elo quốc gia và trao bằng khen từ Ban Chấp Hành Trung Ương Đoàn.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl mb-4">
+                            <i class="fa-solid fa-chess-king"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Trọng Tài Chuyên Nghiệp</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Đội ngũ trọng tài cấp quốc tế và quốc gia trực tiếp điều hành, đảm bảo tính công bằng và chuyên nghiệp cao nhất.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules & Groups -->
+        <section id="rules" class="py-16 bg-slate-100 chess-tile">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-2">Thông Tin Kỹ Thuật</h2>
+                    <p class="text-3xl font-extrabold text-brand-navy font-serif">Điều Lệ Thi Đấu & Bảng Đấu</p>
+                    <div class="w-16 h-1 bg-brand-red mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Left: Age Groups Table -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                            <i class="fa-solid fa-users-gear text-brand-red mr-2"></i> Các Bảng Thi Đấu
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-4">Mỗi nhóm tuổi bao gồm 2 bảng riêng biệt cho <strong>Nam</strong> và <strong>Nữ</strong>:</p>
+                        
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left text-sm text-slate-600">
+                                <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                                    <tr>
+                                        <th class="py-3 px-4">Nhóm Tuổi</th>
+                                        <th class="py-3 px-4">Năm Sinh Hợp Lệ</th>
+                                        <th class="py-3 px-4">Nội Dung Thi Đấu</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr>
+                                        <td class="py-3 px-4 font-bold text-brand-red">U07</td>
+                                        <td class="py-3 px-4">Sinh từ 2019 trở lại đây</td>
+                                        <td class="py-3 px-4">Cờ Nhanh & Cờ Chớp</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-bold text-brand-red">U09</td>
+                                        <td class="py-3 px-4">Sinh năm 2017 - 2018</td>
+                                        <td class="py-3 px-4">Cờ Nhanh & Cờ Chớp</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-bold text-brand-red">U11</td>
+                                        <td class="py-3 px-4">Sinh năm 2015 - 2016</td>
+                                        <td class="py-3 px-4">Cờ Tiêu Chuẩn & Cờ Nhanh</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-bold text-brand-red">U13</td>
+                                        <td class="py-3 px-4">Sinh năm 2013 - 2014</td>
+                                        <td class="py-3 px-4">Cờ Tiêu Chuẩn & Cờ Nhanh</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-3 px-4 font-bold text-brand-red">U15</td>
+                                        <td class="py-3 px-4">Sinh năm 2011 - 2012</td>
+                                        <td class="py-3 px-4">Cờ Tiêu Chuẩn & Cờ Nhanh</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Right: Format & Rules -->
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                                <i class="fa-solid fa-scroll text-brand-red mr-2"></i> Thể Thức Thi Đấu
+                            </h3>
+                            <ul class="space-y-3 text-sm text-slate-600">
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2.5"></i>
+                                    <span><strong>Hệ Thống Thụy Sĩ (Swiss System):</strong> Thi đấu 9 ván cho tất cả các bảng.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2.5"></i>
+                                    <span><strong>Luật Thi Đấu:</strong> Áp dụng Luật Cờ vua hiện hành của Liên đoàn Cờ vua Thế giới (FIDE).</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa-solid fa-circle-check text-emerald-500 mt-1 mr-2.5"></i>
+                                    <span><strong>Xếp Hạng:</strong> Theo tổng điểm, hệ số Buchholz, số trận thắng, số trận cầm quân Đen.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prizes -->
+        <section id="prizes" class="py-16 bg-slate-900 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Cơ Cấu Giải Thưởng</h2>
+                    <p class="text-3xl font-extrabold font-serif text-white">Tôn Vinh Tài Năng Cờ Vua</p>
+                    <div class="w-16 h-1 bg-brand-gold mx-auto mt-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                    <!-- Prize Gold -->
+                    <div class="bg-slate-800/90 border border-amber-500/30 p-6 rounded-2xl transform hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 mx-auto bg-amber-500/20 text-yellow-400 rounded-full flex items-center justify-center text-3xl mb-4">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-400 mb-1">GIẢI NHẤT</h3>
+                        <p class="text-2xl font-black text-white mb-2">15.000.000 VNĐ</p>
+                        <p class="text-xs text-slate-400">Huy chương Vàng + Cúp vô địch + Bằng khen Báo TNTP & Niềm tin Kỳ thủ</p>
+                    </div>
+
+                    <!-- Prize Silver -->
+                    <div class="bg-slate-800/90 border border-slate-500/30 p-6 rounded-2xl transform hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 mx-auto bg-slate-500/20 text-slate-300 rounded-full flex items-center justify-center text-3xl mb-4">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-300 mb-1">GIẢI NHÌ</h3>
+                        <p class="text-2xl font-black text-white mb-2">10.000.000 VNĐ</p>
+                        <p class="text-xs text-slate-400">Huy chương Bạc + Bằng khen + Quà tặng từ nhà tài trợ</p>
+                    </div>
+
+                    <!-- Prize Bronze -->
+                    <div class="bg-slate-800/90 border border-amber-700/30 p-6 rounded-2xl transform hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 mx-auto bg-amber-700/20 text-amber-500 rounded-full flex items-center justify-center text-3xl mb-4">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-500 mb-1">GIẢI BA</h3>
+                        <p class="text-2xl font-black text-white mb-2">5.000.000 VNĐ</p>
+                        <p class="text-xs text-slate-400">Huy chương Đồng + Bằng khen + Quà tặng nhà tài trợ</p>
+                    </div>
+
+                    <!-- Consolation -->
+                    <div class="bg-slate-800/90 border border-slate-700 p-6 rounded-2xl transform hover:-translate-y-2 transition-all">
+                        <div class="w-16 h-16 mx-auto bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-3xl mb-4">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-400 mb-1">TOP 4 - 10</h3>
+                        <p class="text-2xl font-black text-white mb-2">1.000.000 VNĐ</p>
+                        <p class="text-xs text-slate-400">Giấy chứng nhận Kỳ thủ Xuất sắc + Phần quà lưu niệm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section id="register" class="py-16 bg-slate-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-xl border border-slate-200/80 overflow-hidden">
+                    <div class="bg-gradient-to-r from-brand-red to-red-800 p-6 sm:p-8 text-white text-center">
+                        <h2 class="text-2xl sm:text-3xl font-extrabold">THÔNG TIN ĐĂNG KÝ</h2>
+                        <p class="text-red-100 text-sm mt-1">Vui lòng điền đầy đủ và chính xác thông tin đăng ký bên dưới</p>
+                    </div>
+
+                    <form id="registration-form" class="p-6 sm:p-10 space-y-6">
+                        
+                        <!-- Alert Box for success or error -->
+                        <div id="form-alert" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+
+                        <!-- I. THÔNG TIN KỲ THỦ -->
+                        <div>
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center">
+                                <i class="fa-solid fa-user text-brand-red mr-2"></i> I. THÔNG TIN KỲ THỦ
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Họ và tên học sinh *</label>
+                                    <input type="text" id="fullname" required placeholder="Ví dụ: Nguyễn Văn An" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ngày/ tháng / năm sinh *</label>
+                                    <input type="date" id="dob" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Giới tính *</label>
+                                    <select id="gender" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                        <option value="">Chọn giới tính</option>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                        <option value="Khác">Khác</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Trường học *</label>
+                                    <input type="text" id="club" required placeholder="Ví dụ: Tiểu học Lê Lợi" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Khối lớp *</label>
+                                    <input type="text" id="grade" required placeholder="Ví dụ: Lớp 4A" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Bảng đấu / nhóm tuổi *</label>
+                                    <select id="group" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                        <option value="">-- Chọn bảng đấu --</option>
+                                        <option value="U07">U07 (Sinh từ 2019)</option>
+                                        <option value="U09">U09 (Sinh 2017 - 2018)</option>
+                                        <option value="U11">U11 (Sinh 2015 - 2016)</option>
+                                        <option value="U13">U13 (Sinh 2013 - 2014)</option>
+                                        <option value="U15">U15 (Sinh 2011 - 2012)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">MÃ ĐĂNG KÝ KỲ THỦ</label>
+                                    <input type="text" id="reg-code" placeholder="Mã do BTC cấp (Ví dụ: KT2026-8899)" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition uppercase font-mono tracking-wide">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- II. THÔNG TIN PHỤ HUYNH/NGƯỜI GIÁM HỘ -->
+                        <div>
+                            <h3 class="text-base font-bold text-slate-900 border-b border-slate-200 pb-2 mb-4 flex items-center">
+                                <i class="fa-solid fa-users text-brand-red mr-2"></i> II. THÔNG TIN PHỤ HUYNH/NGƯỜI GIÁM HỘ
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">HỌ VÀ TÊN</label>
+                                    <input type="text" id="parent-name" placeholder="Ví dụ: Nguyễn Văn B" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Ngày/ tháng / năm sinh *</label>
+                                    <input type="date" id="parent-dob" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">NGHỀ NGHIỆP</label>
+                                    <input type="text" id="parent-job" placeholder="Ví dụ: Kỹ sư / Giáo viên" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">SỐ ĐIỆN THOẠI LIÊN HỆ</label>
+                                    <input type="tel" id="phone" placeholder="Ví dụ: 0912345678" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">ĐỊA CHỈ HIỆN TẠI</label>
+                                    <input type="text" id="city" placeholder="Ví dụ: Số 123 Đường ABC, Quận Cầu Giấy, Hà Nội" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">EMAIL NHẬN TÀI KHOẢN ĐĂNG NHẬP NỀN TẢNG LICHESS VÀ NHẬN THÔNG BÁO *</label>
+                                    <input type="email" id="email" required placeholder="email@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm outline-none transition">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Agreement Terms -->
+                        <div class="flex items-start space-x-2 pt-2">
+                            <input type="checkbox" id="terms" required class="mt-1 rounded text-brand-red focus:ring-brand-red">
+                            <label for="terms" class="text-xs text-slate-600">
+                                Tôi cam kết thông tin khai báo trên là chính xác và chấp hành đầy đủ Điều lệ của Giải Cờ Vua Báo Thiếu Niên Tiền Phong 2026.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-btn" class="w-full bg-brand-red hover:bg-brand-darkRed text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-base flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>GỬI ĐĂNG KÝ VÀ HOÀN TẤT</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registered Candidates Section -->
+        <section id="registered" class="py-16 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-widest text-brand-red mb-1">Cập Nhật Realtime</h2>
+                        <p class="text-2xl font-bold text-brand-navy">Danh Sách Kỳ Thủ Đã Đăng Ký</p>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <div class="mt-4 md:mt-0 flex items-center space-x-3">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Tìm mã, tên kỳ thủ, CLB..." class="pl-9 pr-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-red">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
+                        </div>
+                        <select id="filter-group" class="py-2 px-3 border border-slate-300 rounded-lg text-sm outline-none focus:ring-2 focus:ring-brand-red">
+                            <option value="ALL">Tất cả bảng</option>
+                            <option value="U07">Bảng U07</option>
+                            <option value="U09">Bảng U09</option>
+                            <option value="U11">Bảng U11</option>
+                            <option value="U13">Bảng U13</option>
+                            <option value="U15">Bảng U15</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="overflow-x-auto bg-slate-50 rounded-2xl border border-slate-200">
+                    <table class="w-full text-left text-sm text-slate-600">
+                        <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200 uppercase text-xs">
+                            <tr>
+                                <th class="py-3 px-4">STT</th>
+                                <th class="py-3 px-4">Mã Đăng Ký</th>
+                                <th class="py-3 px-4">Họ và Tên Kỳ Thủ</th>
+                                <th class="py-3 px-4">Bảng</th>
+                                <th class="py-3 px-4">Giới Tính</th>
+                                <th class="py-3 px-4">Đơn Vị / CLB</th>
+                                <th class="py-3 px-4">Tỉnh/Thành</th>
+                                <th class="py-3 px-4 text-center">Trạng Thái</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registered-table-body" class="divide-y divide-slate-200">
+                            <!-- Populated dynamically via Javascript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2 space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white">
+                            <i class="fa-solid fa-chess-knight text-xl"></i>
+                        </div>
+                        <span class="text-white font-bold text-lg">BÁO THIẾU NIÊN TIỀN PHONG & NHI ĐỒNG</span>
+                    </div>
+                    <p class="text-xs text-slate-400 max-w-md leading-relaxed">
+                        Cơ quan Trung ương của Đội TNTP Hồ Chí Minh. Ban Tổ Chức Giải Cờ Vua Toàn Quốc 2026 cam kết mang lại môi trường thi đấu thể thao trí tuệ lành mạnh, công bằng cho thiếu niên nhi đồng toàn quốc.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Liên Hệ BAN TỔ CHỨC</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li class="flex items-start"><i class="fa-solid fa-location-dot w-5 text-brand-red mt-0.5"></i> 05 Hoà Mã, Hai Bà Trưng, Hà Nội</li>
+                        <li class="flex items-start"><i class="fa-brands fa-facebook w-5 text-brand-red mt-0.5"></i> Facebook: Giải cờ vua học sinh Báo Thiếu niên Tiền phong và Nhi đồng năm học 2026 - 2027</li>
+                        <li class="flex items-center"><i class="fa-solid fa-envelope w-5 text-brand-red"></i> Email: lienhe@covuahocsinh2026.tech</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Theo Dõi Dải Đấu</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-brand-red text-white flex items-center justify-center transition"><i class="fa-solid fa-globe"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Báo Thiếu Niên Tiền Phong & Nhi Đồng. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Default mock data for candidates already registered
+        const defaultCandidates = [
+            { id: 1, code: "KT2026-1001", name: "Trần Minh Trí", group: "U09", gender: "Nam", club: "TH Nguyễn Du", city: "Hà Nội", status: "Đã xác nhận" },
+            { id: 2, code: "KT2026-1002", name: "Lê Ngọc Phương Anh", group: "U11", gender: "Nữ", club: "TH Nguyễn Thái Học", city: "TP. Hồ Chí Minh", status: "Đã xác nhận" },
+            { id: 3, code: "KT2026-1003", name: "Phạm Quốc Bảo", group: "U13", gender: "Nam", club: "THCS Phù Đổng", city: "Đà Nẵng", status: "Chờ xác nhận" },
+            { id: 4, code: "KT2026-1004", name: "Hoàng Gia Huy", group: "U07", gender: "Nam", club: "TH Đinh Tiên Hoàng", city: "Hải Phòng", status: "Đã xác nhận" },
+            { id: 5, code: "KT2026-1005", name: "Vũ Thùy Linh", group: "U15", gender: "Nữ", club: "THCS Chu Văn An", city: "Hà Nội", status: "Đã xác nhận" },
+            { id: 6, code: "KT2026-1006", name: "Đặng Hoàng Nam", group: "U09", gender: "Nam", club: "TH Tràng An", city: "Cần Thơ", status: "Chờ xác nhận" }
+        ];
+
+        // Load saved candidates from localStorage for persistent sessions
+        let candidates = [];
+        try {
+            const saved = localStorage.getItem('tntp_chess_2026_candidates');
+            candidates = saved ? JSON.parse(saved) : [...defaultCandidates];
+        } catch (err) {
+            candidates = [...defaultCandidates];
+        }
+
+        // Update Live Registration Counter (Base 785 + new registrations)
+        function updateRegistrationStats() {
+            const extraCount = Math.max(0, candidates.length - defaultCandidates.length);
+            const currentTotal = 785 + extraCount;
+            const maxTotal = 2000;
+            const percentage = ((currentTotal / maxTotal) * 100).toFixed(2);
+
+            const countEl = document.getElementById('reg-count-text');
+            const percentEl = document.getElementById('reg-percent-text');
+            const barEl = document.getElementById('reg-progress-bar');
+
+            if (countEl) countEl.textContent = `${currentTotal}/${maxTotal}`;
+            if (percentEl) percentEl.textContent = `${percentage}% Chỉ tiêu`;
+            if (barEl) barEl.style.width = `${Math.min(100, percentage)}%`;
+        }
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+
+        // Render Candidates Table
+        const tableBody = document.getElementById('registered-table-body');
+        const searchInput = document.getElementById('search-input');
+        const filterGroup = document.getElementById('filter-group');
+
+        function renderCandidates() {
+            const query = searchInput.value.toLowerCase();
+            const selectedGroup = filterGroup.value;
+
+            const filtered = candidates.filter(item => {
+                const matchesSearch = (item.code && item.code.toLowerCase().includes(query)) || 
+                                      item.name.toLowerCase().includes(query) || 
+                                      item.club.toLowerCase().includes(query) || 
+                                      item.city.toLowerCase().includes(query);
+                const matchesGroup = selectedGroup === 'ALL' || item.group === selectedGroup;
+                return matchesSearch && matchesGroup;
+            });
+
+            tableBody.innerHTML = '';
+            if (filtered.length === 0) {
+                tableBody.innerHTML = `<tr><td colspan="8" class="text-center py-6 text-slate-400">Không tìm thấy kỳ thủ phù hợp</td></tr>`;
+                return;
+            }
+
+            filtered.forEach((item, index) => {
+                const statusBadge = item.status === 'Đã xác nhận' 
+                    ? '<span class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-700 rounded-full">Đã xác nhận</span>'
+                    : '<span class="px-2.5 py-1 text-xs font-semibold bg-amber-100 text-amber-700 rounded-full">Chờ xác nhận</span>';
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-100/50 transition-colors';
+                row.innerHTML = `
+                    <td class="py-3 px-4 font-medium text-slate-500">${index + 1}</td>
+                    <td class="py-3 px-4 font-mono font-bold text-slate-700 text-xs">${item.code || 'N/A'}</td>
+                    <td class="py-3 px-4 font-bold text-slate-800">${item.name}</td>
+                    <td class="py-3 px-4"><span class="font-bold text-brand-red">${item.group}</span></td>
+                    <td class="py-3 px-4">${item.gender}</td>
+                    <td class="py-3 px-4">${item.club}</td>
+                    <td class="py-3 px-4">${item.city}</td>
+                    <td class="py-3 px-4 text-center">${statusBadge}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        searchInput.addEventListener('input', renderCandidates);
+        filterGroup.addEventListener('change', renderCandidates);
+        renderCandidates();
+        updateRegistrationStats();
+
+        // Handle Registration Form Submit
+        const regForm = document.getElementById('registration-form');
+        const alertBox = document.getElementById('form-alert');
+
+        regForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const regCode = document.getElementById('reg-code').value.trim().toUpperCase();
+            const name = document.getElementById('fullname').value.trim();
+            const gender = document.getElementById('gender').value;
+            const group = document.getElementById('group').value;
+            const school = document.getElementById('club').value.trim();
+            const address = document.getElementById('city').value.trim();
+
+            // Simple submission feedback
+            alertBox.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-emerald-100', 'text-emerald-700');
+            alertBox.classList.add('bg-emerald-100', 'text-emerald-800', 'border', 'border-emerald-200');
+            alertBox.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> <strong>Đăng ký thành công!</strong> Thông tin kỳ thủ <strong>${name}</strong> đã được lưu và hiển thị trong danh sách bên dưới.`;
+
+            // Append new registration to the top of the list dynamically
+            candidates.unshift({
+                id: Date.now(),
+                code: regCode || `KT2026-${Math.floor(1000 + Math.random() * 9000)}`,
+                name: name,
+                group: group,
+                gender: gender,
+                club: school,
+                city: address || "Toàn quốc",
+                status: "Đã xác nhận"
+            });
+
+            // Save to localStorage
+            try {
+                localStorage.setItem('tntp_chess_2026_candidates', JSON.stringify(candidates));
+            } catch (err) {
+                console.warn('Could not save to localStorage', err);
+            }
+
+            // Re-render table & update stats counter
+            renderCandidates();
+            updateRegistrationStats();
+
+            // Reset Form
+            regForm.reset();
+
+            // Smooth scroll to the updated candidates table section
+            setTimeout(() => {
+                document.getElementById('registered').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 600);
+        });
+    </script>
+</body>
+</html>
